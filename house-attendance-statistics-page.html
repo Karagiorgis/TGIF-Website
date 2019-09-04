@@ -1,0 +1,155 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta.3/css/bootstrap.min.css" integrity="sha384-Zug+QiDoJOrZ5t4lssLdxGhVrurbmBWopoEl+M6BdEfwnCJZtKxi1KgxUyJq13dy" crossorigin="anonymous">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css">
+  <link rel="stylesheet" href="styles/styles.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"></script>
+</head>
+
+<body>
+  <div class="imag">
+    <div class="container-fluid col-lg-10 my-container">
+      <div class="layer">
+        <div class="row">
+
+          <div class="col-6 col-lg-10">
+            <div class="row">
+              <img class="page-logo" src="images/logo.png" alt="logo">
+              <h1 data-heading="Slide">TGIF</h1>
+            </div>
+          </div>
+
+          <div class="col-6 col-lg-2 email">
+            <div><img class="msg" src="images/msg.png" alt="email">
+              <a href="mailto:info@tgif.net">info@tgif.net</a></div>
+          </div>
+
+        </div>
+        <div class="top">
+          <div class="col nav-bar">
+            <div class="col-12 dropdown row my-dropdown">
+              <a class="home" href="index.html">Home</a>
+              <div class="dropdown-toggle">
+                <button class="dropdown my-button" type="button" data-toggle="dropdown">Congress 113</button>
+                <ul class="dropdown-menu menu-item my-item">
+                  <li><a href="house-data.html">House</a></li>
+                  <li><a href="senate-data.html">Senate</a></li>
+
+                </ul>
+              </div>
+              <div class="dropdown-toggle">
+                <button class="dropdown my-button" type="button" data-toggle="dropdown">Attendance</button>
+                <ul class="dropdown-menu menu-item my-item">
+                  <li><a href="house-attendance-statistics-page.html">House</a></li>
+                  <li><a href="senate-attendance-statistics-page.html">Senate</a></li>
+
+                </ul>
+              </div>
+              <div class="dropdown-toggle">
+                <button class="dropdown my-button" type="button" data-toggle="dropdown">Party Loyalty</button>
+                <ul class="dropdown-menu menu-item my-item">
+                  <li><a href="house-party-loyalty-statistics-page.html">House</a></li>
+                  <li><a href="senate-party-loyalty-statistics.html">Senate</a></li>
+
+                </ul>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="conainer-fluid">
+        <h2 class="page-titles">House Attendance</h2>
+        <div class="row col-12 justify-content-around">
+          <div class="col-6 text order-1">
+            <h2 class="senator">Attendance</h2>
+
+            <p>The Constitution specifies that a majority of members constitutes a quorum to do business in each house. Representatives and senators rarely force the presence of a quorum by demanding quorum calls; thus, in most cases, debates continue even if a majority is not present.</p>
+
+            <p>The Senate uses roll-call votes; a clerk calls out the names of all the senators, each senator stating "aye" or "no" when his or her name is announced. The House reserves roll-call votes for the most formal matters, as a roll-call of all 435 representatives takes quite some time; normally, members vote by electronic device. In the case of a tie, the motion in question fails. In the Senate, the Vice President may (if present) cast the tiebreaking vote.
+            </p>
+          </div>
+
+
+          <div class="col-5 order-2 align-self-center">
+            <h2 class="table-title">House at a glance</h2>
+            <table class="table table-bordered table-dark" id="senate-table">
+              <thead class="table-head">
+                <tr>
+                  <th>Party</th>
+                  <th>No. of Reps</th>
+                  <th>% Voted w/ Party</th>
+                </tr>
+              </thead>
+              <tbody id="tBody"></tbody>
+            </table>
+
+          </div>
+        </div>
+        <div class="row justify-content-center">
+          <div id="load" class="lds-default">
+            <div></div>
+            <div></div>
+            <div></div>
+            <div></div>
+            <div></div>
+            <div></div>
+            <div></div>
+            <div></div>
+            <div></div>
+            <div></div>
+            <div></div>
+            <div></div>
+          </div>
+        </div>
+
+      </div>
+      <div class="row col-12 justify-content-around">
+        <div class="col-6">
+          <h2 class="table-title">Least Engaged (Bottom 10% Attendance)</h2>
+          <table class="table table-bordered table-dark" id="table-body">
+            <thead class="table-head">
+              <tr>
+                <th>Name</th>
+                <th>Last Name</th>
+                <th class="miss">No. Missed Votes</th>
+                <th>% Missed</th>
+              </tr>
+            </thead>
+            <tbody id="table-body1">
+            </tbody>
+          </table>
+        </div>
+
+        <div class="col-6">
+          <h2 class="table-title">Most Engaged (Top 10% Attendance)</h2>
+          <table class="table table-bordered table-dark" id="table-most">
+            <thead class="table-head">
+              <tr>
+                <th>Name</th>
+                <th>Last Name</th>
+                <th class="miss">No. Missed Votes</th>
+                <th>% Missed</th>
+              </tr>
+            </thead>
+            <tbody id="table-body2">
+            </tbody>
+          </table>
+        </div>
+      </div>
+    </div>
+    <div class="footer col-12">
+      <div class="rights col">&copy; 2019 TGIF <span class="line"></span> All Rights Reserved </div>
+    </div>
+
+
+    <script src="main/senate-statistics.js"></script>
+
+
+
+  </div>
+</body></html>

@@ -1,0 +1,143 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta.3/css/bootstrap.min.css" integrity="sha384-Zug+QiDoJOrZ5t4lssLdxGhVrurbmBWopoEl+M6BdEfwnCJZtKxi1KgxUyJq13dy" crossorigin="anonymous">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css">
+  <link rel="stylesheet" href="styles/styles.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"></script>
+</head>
+
+<body>
+  <div class="imag">
+    <div class="container-fluid col-lg-10 my-container">
+      <div class="layer">
+        <div class="row">
+
+          <div class="col-6 col-lg-10">
+            <div class="row">
+              <img class="page-logo" src="images/logo.png" alt="logo">
+              <h1 data-heading="Slide">TGIF</h1>
+            </div>
+          </div>
+
+          <div class="col-6 col-lg-2 email">
+            <div><img class="msg" src="images/msg.png" alt="email">
+              <a href="mailto:info@tgif.net">info@tgif.net</a></div>
+          </div>
+
+        </div>
+        <div class="top">
+          <div class="col nav-bar">
+            <div class="col-12 dropdown row my-dropdown">
+              <a class="home" href="index.html">Home</a>
+              <div class="dropdown-toggle">
+                <button class="dropdown my-button" type="button" data-toggle="dropdown">Congress 113</button>
+                <ul class="dropdown-menu menu-item my-item">
+                  <li><a href="house-data.html">House</a></li>
+                  <li><a href="senate-data.html">Senate</a></li>
+
+                </ul>
+              </div>
+              <div class="dropdown-toggle">
+                <button class="dropdown my-button" type="button" data-toggle="dropdown">Attendance</button>
+                <ul class="dropdown-menu menu-item my-item">
+                  <li><a href="house-attendance-statistics-page.html">House</a></li>
+                  <li><a href="senate-attendance-statistics-page.html">Senate</a></li>
+
+                </ul>
+              </div>
+              <div class="dropdown-toggle">
+                <button class="dropdown my-button" type="button" data-toggle="dropdown">Party Loyalty</button>
+                <ul class="dropdown-menu menu-item my-item">
+                  <li><a href="house-party-loyalty-statistics-page.html">House</a></li>
+                  <li><a href="senate-party-loyalty-statistics.html">Senate</a></li>
+
+                </ul>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      
+      <div class="main-area">
+       
+         <h2 class="page-titles">Congress 113 - House Data</h2>
+           <div class="container-fluid">
+          <div class="text col-12">
+            <h2 class="senator">Congressmen</h2>
+            <p>
+              The major power of the House is to pass federal legislation that affects the entire country, although its bills must also be passed by the Senate and further agreed to by the U.S. President before becoming law (unless both the House and Senate re-pass the legislation with a two-thirds majority in each chamber). The House has some exclusive powers: the power to initiate revenue bills, to impeach officials (impeached officials are subsequently tried in the Senate), and to elect the U.S. President in case there is no majority in the Electoral College.
+              Each U.S. state is represented in the House in proportion to its population as measured in the census, but every state is entitled to at least one representative.
+            </p>
+          </div>
+
+          <div class="row">
+            <div class="col-2 order-2">
+              <label class="filter-state">Filter by State:</label>
+              <select id="mySelect" class='form-control'>
+                <option value = "ALL" class="all">ALL</option>
+              </select>
+            </div>
+            <div class="col-10 order-1">
+             
+              <form name="FilterForm" id="FilterForm" action="" method="">
+                <label class="filter-state">Filter by party:</label>
+                <input type="checkbox" class="test" id="rep" name="filter" value="R" />
+                <label class="filters">Republican</label>
+                <input type="checkbox" class="test" id="dem" name="filter" value="D" />
+                <label class="filters">Democrat</label>
+                <input type="checkbox" class="test" id="int" name="filter" value="I" />
+                <label class="filters">Independent</label>
+              </form>
+            </div>
+          </div>
+
+          <div class="row justify-content-center">
+            <div id="load" class="lds-default">
+              <div></div>
+              <div></div>
+              <div></div>
+              <div></div>
+              <div></div>
+              <div></div>
+              <div></div>
+              <div></div>
+              <div></div>
+              <div></div>
+              <div></div>
+              <div></div>
+            </div>
+          </div>
+          
+          <button id="myBtn" title="Go to top">Top</button>
+          
+          <table class="col-12 table table-bordered table-dark" id="senate-data">
+            <thead class="table-head">
+              <th>First Name</th>
+              <th>Middle Name</th>
+              <th>Last Name</th>
+              <th>Party</th>
+              <th>Seniority</th>
+              <th>State</th>
+              <th>% Votes w/ Party</th>
+            </thead>
+            <tbody id="table-body">
+            </tbody>
+            <span id="textResult"></span>
+          </table>
+
+        </div>
+        <div class="footer col-12">
+          <div class="rights col">&copy; 2019 TGIF <span class="line"></span> All Rights Reserved </div>
+        </div>
+      </div>
+
+      <script src="main/main.js"></script>
+
+    </div>
+
+  </div>
+</body></html>
